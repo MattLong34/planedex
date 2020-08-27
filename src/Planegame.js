@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import Planecard from './Planecard'
-import './Planedex.css'
+import Planedex from './Planedex'
 
 import jupiterImage from './img/012-jupiter.svg'
 import marsImage from './img/017-mars.svg'
@@ -12,7 +11,7 @@ import uranusImage from './img/035-uranus.svg'
 import venusImage from './img/036-venus.svg'
 import plutoImage from './img/011-planet.svg'
 
-class Planedex extends Component{
+class Planegame extends Component {
     static defaultProps = {
         planet: [
             {id: 1, name: 'Mercury', type: 'Terrestrial', image: mercuryImage, distance: "126 million"},
@@ -27,17 +26,32 @@ class Planedex extends Component{
         ]
     }
     render(){
+        let item = this.props.planet[Math.floor(Math.random() * this.props.planet.length)]
+        console.log("item", item)
+
+
+        let hand1 = []
+        let hand2 = [...this.props.planet]
+        while(hand1.length < hand2.length){
+            let randomIndex = Math.floor(Math.random() * hand2.length)
+            let randomPlanet = hand2.splice(randomIndex, 1)[0]
+            hand1.push(randomPlanet)
+        }
+        let randPlan1 = hand1[0]
+        let randPlan2 = hand2[0]
+        console.log("hand1", hand1)
+        console.log("hand2", hand2)
+        console.log("randPlan1", randPlan1)
+        console.log("randPlan2", randPlan2)
         return (
-            <div className="Planedex">
-                <h1>Planets in the Solar System</h1>
-                <div className="Planedex-cards">
-                    {this.props.planet.map((planet) => (
-                        <Planecard id={planet.id} name={planet.name} type={planet.type} image={planet.image} distance={planet.distance} />
-                    ))}
-                </div>
+            <div>
+                <h1>Planegame!</h1>
+                <Planedex planet={hand1[0][0]} />
+                <Planedex planet={hand2} />
             </div>
         )
+
     }
 }
 
-export default Planedex
+export default Planegame

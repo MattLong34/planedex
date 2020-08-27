@@ -10,7 +10,8 @@ class Planecard extends Component {
                 <h1 className="Planecard-title">{this.props.name}</h1>
                 <div>
                     <img src={this.props.image} alt={this.props.name} />
-                    <p className="Planecard-data">A {this.props.type} planet</p>
+                    <p className="Planecard-data">Planet Type: {this.props.type}</p>
+                    <p className="Planecard-data">Miles from Earth: {this.props.distance}</p>
                 </div>
             </div>
         )

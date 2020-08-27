@@ -1,3 +1,8 @@
+.Planedex {
+    /* border-top: 3px solid black; */
+    text-align: center;
+}
+
 .Planedex-cards {
     display: flex;
     justify-content: space-evenly;
