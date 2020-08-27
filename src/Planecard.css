@@ -9,10 +9,20 @@
     border-radius: 5px;
 }
 
-img {
-    width: 100px;
-  }
+.Planecard p {
+    font-size: 20px;
+}
 
-  .Planecard-data {
-      font-size: 1.5rem;
-  }
+.Planecard img {
+    width: 100px;
+    transition: all ease 500ms;
+}
+
+.Planecard img:hover {
+    transform: scale(1.4);
+}
+
+.Planecard-data {
+    font-size: 1.5rem;
+}
+
