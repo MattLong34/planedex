@@ -7,9 +7,9 @@ class Planecard extends Component {
     render(){
         return (
             <div className="Planecard">
-                <h1>{this.props.name}</h1>
+                <h1 className="Planecard-title">{this.props.name}</h1>
                 <img src={jupiter} alt={this.props.name} />
-                <h2>A {this.props.type} planet</h2>
+                <p className="Planecard-data">A {this.props.type} planet</p>
             </div>
         )
     }

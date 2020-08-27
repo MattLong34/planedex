@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Planecard from './Planecard'
+import './Planedex.css'
 
 class Planedex extends Component{
     static defaultProps = {
@@ -14,9 +15,11 @@ class Planedex extends Component{
         return (
             <div className="Planedex">
                 <h1>Planedex!</h1>
+                <div className="Planedex-cards">
                     {this.props.planet.map((planet) => (
-                <Planecard id={planet.id} name={planet.name} type={planet.type} />
-                ))}
+                        <Planecard id={planet.id} name={planet.name} type={planet.type} />
+                    ))}
+                </div>
         </div>
         )
     }
