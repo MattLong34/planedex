@@ -8,7 +8,12 @@ class Planedex extends Component{
             {id: 1, name: 'Mercury', type: 'terrestrial'},
             {id: 2, name: 'Venus', type: 'terrestrial'},
             {id: 3, name: 'Earth', type: 'terrestrial'},
-            {id: 4, name: 'Mars', type: 'terrestrial'}
+            {id: 4, name: 'Mars', type: 'terrestrial'},
+            {id: 5, name: 'Jupiter', type: 'jovial'},
+            {id: 6, name: 'Saturn', type: 'jovial'},
+            {id: 7, name: 'Uranus', type: 'jovial'},
+            {id: 8, name: 'Neptune', type: 'jovial'},
+            {id: 9, name: 'Pluto', type: 'dwarf'},
         ]
     }
     render(){
