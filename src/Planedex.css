@@ -8,3 +8,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
+.Planedex h1 {
+    color: white;
+}
